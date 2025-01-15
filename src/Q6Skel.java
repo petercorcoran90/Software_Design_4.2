@@ -62,8 +62,7 @@ class Counter extends Thread implements ActionListener {
 						wait();
 					}
 				}
-			} catch (InterruptedException e) {
-				e.printStackTrace(); // Log any interruptions
+			} catch (Exception e) {
 			}
 		}
 	}
