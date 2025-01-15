@@ -5,7 +5,6 @@ class Value {
 }
 
 class Stepper {
-
     public Stepper() {
     }
 
@@ -21,7 +20,6 @@ class Stepper {
 }
 
 class Printer extends Thread {
-
     public Printer() {
     }
 
@@ -37,7 +35,6 @@ class Printer extends Thread {
 }
 
 public class Exercise4 {
-
     public static void main(String[] args) {
         Stepper s = new Stepper();
         Printer p = new Printer();
