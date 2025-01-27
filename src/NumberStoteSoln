@@ -1,0 +1,22 @@
+class NumberStore {
+    private int contents=0;
+    private boolean available = false;
+
+     public synchronized int get() throws Exception {
+        while (available == false) {
+                wait();
+        }
+        available = false;
+        notify();
+        return contents;
+      }
+     public synchronized void put(int value) throws Exception {
+        while (available == true) {
+             wait();            
+        }
+
+     contents = value;
+     available = true;
+     notify();                
+      }                         
+}
